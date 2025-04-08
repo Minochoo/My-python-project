@@ -29,6 +29,24 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 import time
 
+from flask import Flask
+
+# إعداد خادم Flask للإبقاء على التطبيق نشط
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Bot is running and connected to Free Fire servers!'
+
+def run_flask():
+    app.run(host='0.0.0.0', port=8080)
+
+# بوت TCP الذي يتصل بسيرفرات Free Fire
+
+# تشغيل Flask في Thread منفصل
+if __name__ == "__main__":
+	threading.Thread(target=run_flask).start()
+
 tempid = None
 sent_inv = False
 start_par = False

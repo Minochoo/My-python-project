@@ -1307,7 +1307,7 @@ Bot Made By [00ff00]ＰＡＲＡㅤＨＥＸᵀᴱᴬᴹ.""", uid
             
             
 
-            if "1200" in data.hex()[0:4] and b"WELCOME TO HIDDEN TEAM BOT" in data:
+            if "1200" in data.hex()[0:4] and b"Hi" in data:
             	pass
             else:
              

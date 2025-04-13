@@ -500,7 +500,7 @@ def format_timestamp(timestamp):
 def restart_program():
     p = psutil.Process(os.getpid())
     open_files = p.open_files()
-    connections = connections()
+    connections = net_connections()
     for handler in open_files:
         try:
             os.close(handler.fd)

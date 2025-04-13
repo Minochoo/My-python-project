@@ -432,6 +432,7 @@ class FF_CLIENT(threading.Thread):
             data = clients.recv(9999)
             if data == b"":
                 print("Connection closed by remote host")
+		    restart_program()
                 break
             
 def get_available_room(input_text):
@@ -1010,6 +1011,7 @@ class FF_CLIENT(threading.Thread):
 
             if data == b"":
                 print("Connection closed by remote host")
+		    restart_program()
                 break
                 print(f"Received data: {data}")
             

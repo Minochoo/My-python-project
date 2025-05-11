@@ -1010,6 +1010,7 @@ class FF_CLIENT(threading.Thread):
 
             if data == b"":
                 print("Connection closed by remote host")
+		restart_program()
                 break
                 print(f"Received data: {data}")
             
